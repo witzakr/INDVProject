@@ -8,23 +8,42 @@ const headlineText = document.getElementById('article-headline-text');
 const imageText = document.getElementById('article-image-text');
 const contentText = document.getElementById('article-content-text');
 
-// Article content queue. Index 0 is shown first.
-const articles = [
-  { headline: 'Headline', image: 'Article Image', content: 'Article Content' },
-  { headline: 'Headline 2', image: 'Article Image 2', content: 'Article Content 2' },
-  { headline: 'Headline 3', image: 'Article Image 3', content: 'Article Content 3' },
-  { headline: 'Headline 4', image: 'Article Image 4', content: 'Article Content 4' }
-];
-
+const TOTAL_ARTICLES = 4;
 let currentArticleIndex = 0;
 let isReviewing = false;
 
-function loadArticle(index) {
-  if (index >= articles.length) return;
-  const article = articles[index];
-  if (headlineText) headlineText.textContent = article.headline;
-  if (imageText) imageText.textContent = article.image;
-  if (contentText) contentText.textContent = article.content;
+async function fetchArticle(index) {
+  try {
+    const response = await fetch(`../articles/article${index + 1}.json`);
+    return await response.json();
+  } catch (e) {
+    console.error(`Failed to load article${index + 1}.json`, e);
+    return null;
+  }
+}
+
+function displayArticle(data) {
+  if (!data) return;
+  if (headlineText) headlineText.textContent = data.headline || '';
+  if (imageText) imageText.textContent = data.image || '';
+  if (contentText) contentText.textContent = data.content || '';
+
+  if (data.editor) {
+    const e = data.editor;
+    const set = (id, val) => { const el = document.getElementById(id); if (el) el.textContent = val || ''; };
+    set('editor-first-name', e.firstName);
+    set('editor-last-name', e.lastName);
+    set('editor-affiliation', e.affiliation);
+    set('editor-occupation', e.occupation);
+    set('editor-marital-status', e.maritalStatus);
+    set('editor-reputation', e.reputation);
+    set('editor-briefing', e.briefing);
+  }
+
+  if (data.memo) {
+    const el = document.getElementById('memo-directive');
+    if (el) el.textContent = data.memo.directive || '';
+  }
 }
 
 function incrementQueue() {
@@ -79,34 +98,35 @@ function hideArticle() {
   isReviewing = false;
 }
 
-// Initialize: left pile starts with 4 stacked cards (article-queue total),
-// article card starts hidden until a card is picked from the pile
+
 for (let i = 0; i < 4; i++) {
   addToPile(pileLeft);
 }
 hideArticle();
 
-// Click the left (unredacted) pile to bring the top article into review
+
 if (dropZoneLeft) {
-  dropZoneLeft.addEventListener('click', () => {
+  dropZoneLeft.addEventListener('click', async () => {
     if (isReviewing) return;
     if (!pileLeft || pileLeft.children.length === 0) return;
 
+    const data = await fetchArticle(currentArticleIndex);
+    if (!data) return;
+
     removeFromPile(pileLeft);
-    loadArticle(currentArticleIndex);
+    displayArticle(data);
     showArticle();
   });
 }
 
-// Map each stamp color to the redacted-pile stamp graphic
+
 const pileStampAssets = {
   'stamp-red': '../img/reject.png',
   'stamp-yellow': '../img/toredact.png',
   'stamp-green': '../img/approved.png'
 };
 
-// Clicking a stamp sends the reviewed article to the redacted pile,
-// marked with that stamp's image
+
 document.querySelectorAll('.stamp-swatch').forEach((swatch) => {
   swatch.addEventListener('click', () => {
     if (!isReviewing) return;
@@ -119,13 +139,12 @@ document.querySelectorAll('.stamp-swatch').forEach((swatch) => {
     hideArticle();
     closeStampsShelf();
 
-    if (currentArticleIndex < articles.length - 1) {
+    if (currentArticleIndex < TOTAL_ARTICLES - 1) {
       currentArticleIndex += 1;
     }
   });
 });
 
-// Close the stamps shelf popup
 function closeStampsShelf() {
   const stampsToggle = document.getElementById('stamps-toggle');
   const stampsPopup = document.getElementById('stamps-popup');

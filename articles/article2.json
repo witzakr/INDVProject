@@ -1,0 +1,17 @@
+{
+  "headline": "Headline 2",
+  "image": "Article Image 2",
+  "content": "Article Content 2",
+  "editor": {
+    "firstName": "First 2",
+    "lastName": "Last 2",
+    "affiliation": "Civilian",
+    "occupation": "Journalist",
+    "maritalStatus": "Unknown",
+    "reputation": "Neutral",
+    "briefing": "Briefing 2."
+  },
+  "memo": {
+    "directive": "Directive 2."
+  }
+}
