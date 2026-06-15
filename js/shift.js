@@ -46,3 +46,17 @@ if (editorToggle && editorReport && memoToggle && memoReport) {
     togglePanel(memoToggle, memoReport, editorToggle, editorReport);
   });
 }
+
+// Toggle pause/play icon
+const pauseBtn = document.getElementById('pause-btn');
+const pauseIcon = document.getElementById('pause-icon');
+
+if (pauseBtn && pauseIcon) {
+  let isPaused = false;
+
+  pauseBtn.addEventListener('click', () => {
+    isPaused = !isPaused;
+    pauseIcon.src = isPaused ? '../img/play.png' : '../img/pause.png';
+    pauseBtn.setAttribute('aria-label', isPaused ? 'Play' : 'Pause');
+  });
+}

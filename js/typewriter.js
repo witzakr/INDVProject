@@ -1,6 +1,6 @@
 // Plays a typewriter click sound on every button / link-button interaction
 document.addEventListener('DOMContentLoaded', () => {
-  const clickSound = new Audio('../sounds/typeclick.mp3');
+  const clickSound = new Audio('/sounds/typeclick.mp3');
 
   const playClick = () => {
     // Clone so rapid clicks can overlap without cutting each other off
@@ -11,7 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const selectors = [
-    '#approve-btn'
+    '#approve-btn',
+    '#next-article-btn',
+    '#pause-btn'
   ];
 
   document.querySelectorAll(selectors.join(', ')).forEach((el) => {

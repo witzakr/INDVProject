@@ -9,6 +9,21 @@
 <body>
 
   <main class="screen" id="shift-screen">
+    <div class="top-left-bar">
+      <div class="article-queue">
+        <span class="article-queue-label">
+          Article Queue
+          <span class="article-queue-count" id="article-queue-count">1/4</span>
+        </span>
+      </div>
+
+      <button type="button" id="pause-btn" class="pause-btn" aria-label="Pause">
+        <img src="../img/pause.png" alt="" id="pause-icon">
+      </button>
+    </div>
+
+    <button type="button" id="next-article-btn" class="next-article-btn">Next Article</button>
+
     <div class="top-tabs">
       <div class="top-tab">
         <div class="top-tab-panel">
@@ -64,7 +79,7 @@
         <button type="button" id="memo-toggle" class="top-tab-toggle" aria-label="Toggle memo panel" aria-expanded="false">&#8595;</button>
 
         <div class="memo-report" id="memo-report">
-          <img src="../img/DCCBIG.png" alt="Department Seal" class="memo-report-seal">
+          <img src="../img/DCCLOGOSMALL.png" alt="Department Seal" class="memo-report-seal">
           <img src="../img/FlagSmall.png" alt="National Flag" class="memo-report-flag">
 
           <div class="memo-report-directive">
@@ -120,6 +135,8 @@
       </div>
     </footer>
 
+    <button type="button" id="end-shift-btn" class="end-shift-btn">End Shift</button>
+
     <div class="mini-id-card-flip" id="mini-id-card-flip" tabindex="0" role="button" aria-pressed="false" aria-label="ID card, press to flip">
       <div class="mini-id-card-inner">
         <article class="mini-id-card mini-id-card-front">
@@ -171,5 +188,7 @@
   <script src="../js/stamps.js"></script>
   <script src="../js/stamp-sound.js"></script>
   <script src="../js/ambience.js"></script>
+  <script src="../js/drawer-sound.js"></script>
+  <script src="../js/stamp-shelf-sound.js"></script>
 </body>
 </html>

@@ -2,9 +2,9 @@
 // Starts muted automatically on page load, then unmutes (and ensures
 // playback is running) on the first user interaction.
 document.addEventListener('DOMContentLoaded', () => {
-  const ambientSound = new Audio('sounds/office-ambience.mp3');
+  const ambientSound = new Audio('../sounds/office-ambience.mp3');
   ambientSound.loop = true;
-  ambientSound.volume = 0.3;
+  ambientSound.volume = 0.5;
   ambientSound.muted = true;
 
   ambientSound.play().catch(() => {});

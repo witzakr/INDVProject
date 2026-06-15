@@ -587,6 +587,138 @@ body {
   outline-offset: 2px;
 }
 
+/* ===== Article Queue & Pause (top left) ===== */
+
+.top-left-bar {
+  position: fixed;
+  top: 0;
+  left: 16px;
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  z-index: 5;
+}
+
+.article-queue {
+  background: var(--accent-navy);
+  border-radius: 0 0 6px 6px;
+  box-shadow: 0 10px 25px var(--shadow);
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.article-queue-label,
+.article-queue-count {
+  font-weight: 700;
+  color: var(--accent-navy);
+}
+
+.article-queue-label {
+  background: var(--accent-gold);
+  box-shadow: 0 4px 10px var(--shadow);
+  padding: 14px 28px;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.article-queue-count {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.pause-btn {
+  width: 56px;
+  height: 56px;
+  margin: auto 0 auto 16px;
+  background: var(--accent-navy);
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 6px 14px var(--shadow);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+}
+
+.pause-btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 3px 8px var(--shadow);
+}
+
+.pause-btn:focus-visible {
+  outline: 3px solid var(--card-bg);
+  outline-offset: 2px;
+}
+
+.pause-btn img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.next-article-btn {
+  position: fixed;
+  top: 118px;
+  left: 36px;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--accent-navy);
+  background: var(--accent-gold);
+  border: none;
+  border-radius: 4px;
+  padding: 12px 24px;
+  box-shadow: 0 8px 18px var(--shadow);
+  cursor: pointer;
+  z-index: 5;
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+}
+
+.next-article-btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 4px 10px var(--shadow);
+}
+
+.next-article-btn:focus-visible {
+  outline: 3px solid var(--accent-navy);
+  outline-offset: 2px;
+}
+
+.end-shift-btn {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  font-family: inherit;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--accent-gold);
+  background: var(--accent-navy);
+  border: none;
+  border-radius: 4px;
+  padding: 14px 28px;
+  box-shadow: 0 8px 18px var(--shadow);
+  cursor: pointer;
+  z-index: 5;
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+}
+
+.end-shift-btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 4px 10px var(--shadow);
+}
+
+.end-shift-btn:focus-visible {
+  outline: 3px solid var(--card-bg);
+  outline-offset: 2px;
+}
+
 /* ===== Editor Report Card ===== */
 
 .editor-report {
