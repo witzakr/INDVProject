@@ -13,7 +13,7 @@
       <div class="article-queue">
         <span class="article-queue-label">
           Article Queue
-          <span class="article-queue-count" id="article-queue-count">1/4</span>
+          <span class="article-queue-count" id="article-queue-count">0/4</span>
         </span>
       </div>
 
@@ -22,7 +22,6 @@
       </button>
     </div>
 
-    <button type="button" id="next-article-btn" class="next-article-btn">Next Article</button>
 
     <div class="top-tabs">
       <div class="top-tab">
@@ -92,25 +91,40 @@
       </div>
     </div>
 
-    <article class="article-card">
-      <div class="article-row" data-element="headline">
-        <section class="article-headline">
-          <h1>Headline</h1>
-        </section>
+    <div class="drop-zone drop-zone-left" id="drop-zone-left">
+      <div class="pile" id="pile-left"></div>
+      <span>Unredacted</span>
+    </div>
+    <div class="drop-zone drop-zone-right" id="drop-zone-right">
+      <div class="pile" id="pile-right"></div>
+      <span>Redacted</span>
+    </div>
+
+    <div class="article-slot">
+      <div class="review-outline">
+        <span>Review</span>
       </div>
 
-      <div class="article-row" data-element="image">
-        <section class="article-image">
-          <p>Article Image</p>
-        </section>
-      </div>
+      <article class="article-card" id="article-card">
+        <div class="article-row" data-element="headline">
+          <section class="article-headline">
+            <h1 id="article-headline-text">Headline</h1>
+          </section>
+        </div>
 
-      <div class="article-row" data-element="content">
-        <section class="article-content">
-          <p>Article Content</p>
-        </section>
-      </div>
-    </article>
+        <div class="article-row" data-element="image">
+          <section class="article-image">
+            <p id="article-image-text">Article Image</p>
+          </section>
+        </div>
+
+        <div class="article-row" data-element="content">
+          <section class="article-content">
+            <p id="article-content-text">Article Content</p>
+          </section>
+        </div>
+      </article>
+    </div>
 
     <div class="stamp-selector">
       <button type="button" id="stamp-preview" class="stamp-preview" aria-label="Selected stamp"></button>
@@ -182,13 +196,14 @@
     </div>
   </main>
 
+  <script src="../js/drag-article.js"></script>
   <script src="../js/miniID.js"></script>
   <script src="../js/typewriter.js"></script>
   <script src="../js/shift.js"></script>
+  <script src="../js/drawer-sound.js"></script>
+  <script src="../js/stamp-shelf-sound.js"></script>
   <script src="../js/stamps.js"></script>
   <script src="../js/stamp-sound.js"></script>
   <script src="../js/ambience.js"></script>
-  <script src="../js/drawer-sound.js"></script>
-  <script src="../js/stamp-shelf-sound.js"></script>
 </body>
 </html>

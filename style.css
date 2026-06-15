@@ -663,34 +663,6 @@ body {
   object-fit: contain;
 }
 
-.next-article-btn {
-  position: fixed;
-  top: 118px;
-  left: 36px;
-  font-family: inherit;
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--accent-navy);
-  background: var(--accent-gold);
-  border: none;
-  border-radius: 4px;
-  padding: 12px 24px;
-  box-shadow: 0 8px 18px var(--shadow);
-  cursor: pointer;
-  z-index: 5;
-  transition: transform 0.08s ease, box-shadow 0.08s ease;
-}
-
-.next-article-btn:active {
-  transform: translateY(2px);
-  box-shadow: 0 4px 10px var(--shadow);
-}
-
-.next-article-btn:focus-visible {
-  outline: 3px solid var(--accent-navy);
-  outline-offset: 2px;
-}
-
 .end-shift-btn {
   position: fixed;
   bottom: 16px;
@@ -913,9 +885,121 @@ body {
 
 /* ===== Shift / Article Review ===== */
 
-.article-card {
+.drop-zone {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 180px;
+  height: 40%;
+  max-height: 300px;
+  border: 3px dashed rgba(255,255,255,0.3);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.drop-zone span {
+  position: relative;
+  z-index: 1;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.5);
+  text-align: center;
+  transition: color 0.15s ease;
+  pointer-events: none;
+}
+
+.drop-zone-left {
+  left: 24px;
+  cursor: pointer;
+}
+
+.drop-zone-right {
+  right: 24px;
+  pointer-events: none;
+}
+
+.drop-zone-left.is-empty {
+  cursor: default;
+}
+
+.drop-zone.is-active {
+  border-color: var(--accent-gold);
+  background: rgba(201, 168, 76, 0.12);
+}
+
+.drop-zone.is-active span {
+  color: var(--accent-gold);
+}
+
+.pile {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90px;
+  height: 110px;
+  z-index: 6;
+  pointer-events: none;
+}
+
+.pile-card {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--card-bg);
+  border-radius: 4px;
+  box-shadow: 0 4px 10px var(--shadow);
+  overflow: hidden;
+}
+
+.pile-card-stamp {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70%;
+  height: auto;
+  transform: translate(-50%, -50%) rotate(-12deg);
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+.article-slot {
   width: 100%;
   max-width: 560px;
+  height: 566px;
+  position: relative;
+}
+
+.review-outline {
+  width: 100%;
+  height: 100%;
+  border: 3px dashed rgba(255,255,255,0.3);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.review-outline span {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.5);
+}
+
+.article-card {
+  width: 100%;
+  height: 100%;
   background: var(--card-bg);
   border-radius: 4px;
   box-shadow: 0 10px 25px var(--shadow);
@@ -923,6 +1007,32 @@ body {
   display: flex;
   flex-direction: column;
   gap: 14px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.article-card.is-hidden {
+  opacity: 0;
+  transform: scale(0.85);
+  pointer-events: none;
+}
+
+@keyframes article-pop-in {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.article-card.is-appearing {
+  animation: article-pop-in 0.3s ease-out;
 }
 
 .article-row {
