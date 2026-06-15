@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Department of Civil Communications — Shift</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <main class="screen" id="shift-screen">
+    <article class="article-card">
+      <div class="article-row" data-element="headline">
+        <section class="article-headline">
+          <h1>Headline</h1>
+        </section>
+      </div>
+
+      <div class="article-row" data-element="image">
+        <section class="article-image">
+          <p>Article Image</p>
+        </section>
+      </div>
+
+      <div class="article-row" data-element="content">
+        <section class="article-content">
+          <p>Article Content</p>
+        </section>
+      </div>
+    </article>
+
+    <div class="stamp-selector">
+      <button type="button" id="stamp-preview" class="stamp-preview" aria-label="Selected stamp"></button>
+    </div>
+
+    <footer class="screen-footer">
+      <div class="stamps-drawer">
+        <div class="stamps-popup" id="stamps-popup">
+          <div class="stamps-rack">
+            <button type="button" class="stamp-swatch stamp-red" aria-label="Red stamp"></button>
+            <button type="button" class="stamp-swatch stamp-yellow" aria-label="Yellow stamp"></button>
+            <button type="button" class="stamp-swatch stamp-green" aria-label="Green stamp"></button>
+          </div>
+        </div>
+
+        <div class="stamps-shelf">
+          <button type="button" id="stamps-toggle" class="stamps-toggle" aria-label="Toggle stamps" aria-expanded="false">&#8593;</button>
+          <div class="stamps-panel">
+            <span class="stamps-label">Stamps</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="../js/typewriter.js"></script>
+  <script src="../js/shift.js"></script>
+  <script src="../js/stamps.js"></script>
+  <script src="../js/stamp-sound.js"></script>
+</body>
+</html>
