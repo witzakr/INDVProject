@@ -51,11 +51,57 @@
         </div>
       </div>
     </footer>
+
+    <div class="mini-id-card-flip" id="mini-id-card-flip" tabindex="0" role="button" aria-pressed="false" aria-label="ID card, press to flip">
+      <div class="mini-id-card-inner">
+        <article class="mini-id-card mini-id-card-front">
+          <header class="id-header">
+            <span class="id-issuer">United Demoratic States Government</span>
+            <div class="id-header-marks">
+              <img src="../img/DCCLOGOSMALL.png" alt="Department Seal" class="id-seal">
+              <img src="../img/FlagSmall.png" alt="National Flag" class="id-flag">
+            </div>
+          </header>
+
+          <div class="id-body">
+            <div class="id-photo-frame" aria-hidden="true"></div>
+
+            <div class="id-details">
+              <img src="../img/Watermark.png" alt="" class="id-watermark is-approved" aria-hidden="true">
+
+              <p class="id-field"><strong>Affiliation</strong></p>
+              <p class="id-value">Civilian</p>
+
+              <p class="id-field"><strong>Agency Department</strong></p>
+              <p class="id-value">Department of Civil Communications</p>
+
+              <p class="id-field"><strong>Issued:</strong> <span id="mini-id-issued"></span></p>
+              <p class="id-field"><strong>Expires:</strong> <span id="mini-id-expires"></span></p>
+            </div>
+          </div>
+
+          <div class="id-name">
+            <p id="mini-id-last-name"></p>
+            <p id="mini-id-first-name"></p>
+          </div>
+
+          <footer class="id-footer">
+            <span class="id-code" id="mini-id-code"></span>
+          </footer>
+        </article>
+
+        <article class="mini-id-card mini-id-card-back">
+          <img src="../img/CoatOfArmsBig.png" alt="Logo" class="id-back-logo">
+        </article>
+      </div>
+    </div>
   </main>
 
+  <script src="../js/miniID.js"></script>
   <script src="../js/typewriter.js"></script>
   <script src="../js/shift.js"></script>
   <script src="../js/stamps.js"></script>
   <script src="../js/stamp-sound.js"></script>
+  <script src="../js/ambience.js"></script>
 </body>
 </html>
