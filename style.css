@@ -1,0 +1,400 @@
+:root {
+  --bg: #e7e7e5;
+  --card-bg: #ececea;
+  --ink: #1c1c1e;
+  --shadow: rgba(0,0,0,0.18);
+  --accent-navy: #0D1F3C;
+  --accent-gold: #C9A84C;
+  --background-color: #800020;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--background-color);
+  font-family: Cambria, "Times New Roman", serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 520px;
+}
+
+.card {
+  width: 100%;
+  background: var(--accent-navy);
+  border-radius: 10px;
+  box-shadow: 0 10px 10px;;
+  padding: 32px 36px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.seal {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+}
+
+.flag {
+  position: absolute;
+  top: 4px;
+  right: 0;
+  width: 56px;
+  height: auto;
+  box-shadow: 0 10px 10px;;
+  object-fit: contain;
+}
+
+.card-body {
+  background: var(--accent-gold);
+  border-radius: 6px;
+  box-shadow: 0 6px 16px var(--shadow);
+  padding: 20px;
+}
+
+.card-body p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--accent-navy);
+  text-align: center;
+}
+
+.card-body p + p {
+  margin-top: 18px;
+}
+
+.motto {
+  font-weight: bold;
+  color: var(--accent-navy);
+}
+
+.screen-footer {
+  width: 100%;
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+}
+
+.start-btn {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  width: 70%;
+  padding: 16px 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+  font-family: inherit;
+  color: var(--accent-navy);
+  background: var(--accent-gold);
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 10px 10px black;;
+  cursor: pointer;
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+}
+
+.start-btn:hover {
+  box-shadow: 0 10px 22px var(--shadow);
+}
+
+.start-btn:active {
+  transform: translateY(4px);
+  box-shadow: 0 4px 10px var(--shadow);
+}
+
+.start-btn:focus-visible {
+  outline: 3px solid var(--accent-navy);
+  outline-offset: 2px;
+}
+
+/* ===== Registration Form ===== */
+
+.form-title {
+  color: var(--accent-navy);
+  text-align: center;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  color: var(--accent-navy);
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.form-group input {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 4px;
+  background: var(--card-bg);
+  color: var(--ink);
+}
+
+.form-group input:focus-visible {
+  outline: 3px solid var(--accent-navy);
+  outline-offset: 2px;
+}
+
+/* ===== ID Card ===== */
+
+.id-card-flip {
+  width: 100%;
+  max-width: 520px;
+  perspective: 1600px;
+  cursor: pointer;
+}
+
+.id-card-flip.is-flipped .id-card-inner {
+  transform: rotateY(180deg);
+}
+
+.id-card-inner {
+  position: relative;
+  width: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.id-card.id-card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--accent-navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.id-card-front,
+.id-card-back {
+  transform: rotateY(0deg);
+  backface-visibility: hidden;
+}
+
+.id-card-back {
+  transform: rotateY(180deg);
+}
+
+.id-back-logo {
+  width: 40%;
+  max-width: 160px;
+  height: auto;
+  opacity: 0.9;
+}
+
+.id-card {
+  width: 100%;
+  max-width: 520px;
+  background: var(--card-bg);
+  border-radius: 16px;
+  box-shadow: 0 10px 25px var(--shadow);
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  color: var(--ink);
+}
+
+.id-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.id-issuer {
+  font-size: 0.7rem;
+  letter-spacing: 0.02em;
+}
+
+.id-header-marks {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.id-flag {
+  width: 40px;
+  height: auto;
+}
+
+.id-seal {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+}
+
+.id-body {
+  display: flex;
+  gap: 16px;
+  margin-top: 12px;
+  flex: 1;
+}
+
+.id-photo-frame {
+  width: 38%;
+  max-height: 180px;
+  aspect-ratio: 3 / 4;
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.15);
+}
+
+.id-details {
+  position: relative;
+  flex: 1;
+  font-size: 0.8rem;
+  line-height: 1.35;
+}
+
+.id-watermark {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 120px;
+  height: auto;
+  opacity: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.id-field,
+.id-value {
+  position: relative;
+  z-index: 1;
+}
+
+.id-field strong {
+  display: inline;
+}
+
+.id-value {
+  margin-bottom: 6px;
+}
+
+.id-name {
+  margin-top: 12px;
+}
+
+.id-name p {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.id-footer {
+  margin-top: auto;
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  position: relative;
+}
+
+.id-code {
+  margin-left: auto;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: rgba(0,0,0,0.35);
+  font-family: Cambria, "Times New Roman", serif;
+}
+
+.id-actions {
+  width: 100%;
+  max-width: 520px;
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.id-action-btn {
+  flex: 1;
+  text-align: center;
+  padding: 14px 0;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: inherit;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 8px 18px var(--shadow);
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+}
+
+.id-action-btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 4px 10px var(--shadow);
+}
+
+.id-action-btn:focus-visible {
+  outline: 3px solid var(--accent-gold);
+  outline-offset: 2px;
+}
+
+.id-back-btn {
+  background: var(--card-bg);
+  color: var(--accent-navy);
+}
+
+.id-approve-btn {
+  background: var(--accent-navy);
+  color: var(--accent-gold);
+}
+
+.id-start-btn {
+  background: var(--accent-gold);
+  color: var(--accent-navy);
+}
+
+.id-start-btn.is-disabled {
+  pointer-events: none;
+  opacity: 0.45;
+}
+
+/* Approval watermark animation */
+.id-watermark.is-approved {
+  animation: stamp-in 0.4s ease-out forwards;
+}
+
+@keyframes stamp-in {
+  0% {
+    opacity: 0;
+    transform: scale(1.6) rotate(-18deg);
+  }
+  60% {
+    opacity: 0.8;
+    transform: scale(0.95) rotate(-12deg);
+  }
+  100% {
+    opacity: 0.9;
+    transform: scale(1) rotate(-12deg);
+  }
+}

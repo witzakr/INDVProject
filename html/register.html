@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Department of Civil Communications — Registration</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <main class="screen" id="form-screen">
+    <article class="card">
+      <header class="card-header">
+        <img src="../img/DCCLOGOSMALL.png" alt="Department Seal" class="seal">
+        <img src="../img/FlagSmall.png" alt="National Flag" class="flag">
+      </header>
+
+      <section class="card-body">
+        <h1 class="form-title">Employee Registration</h1>
+
+        <form id="registration-form">
+          <div class="form-group">
+            <label for="first-name">First name</label>
+            <input type="text" id="first-name" name="first-name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="last-name">Last name</label>
+            <input type="text" id="last-name" name="last-name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" min="16" max="100" required>
+          </div>
+        </form>
+      </section>
+    </article>
+
+    <footer class="screen-footer">
+      <button type="submit" form="registration-form" id="continue-btn" class="start-btn">Continue</button>
+    </footer>
+  </main>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>
