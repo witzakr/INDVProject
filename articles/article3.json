@@ -1,17 +1,17 @@
 {
-  "headline": "Headline 3",
-  "image": "Article Image 3",
-  "content": "Article Content 3",
+  "headline": ["Headline 1", "Headline 1 (alt 2)", "Headline 1 (alt 3)"],
+  "image": ["Article Image 1", "Article Image 1 (alt 2)", "Article Image 1 (alt 3)"],
+  "content": ["Article Content 1", "Article Content 1 (alt 2)", "Article Content 1 (alt 3)"],
   "editor": {
-    "firstName": "First 3",
-    "lastName": "Last 3",
+    "firstName": "First 1",
+    "lastName": "Last 1",
     "affiliation": "Civilian",
     "occupation": "Journalist",
     "maritalStatus": "Unknown",
     "reputation": "Neutral",
-    "briefing": "Briefing 3."
+    "briefing": "Briefing 1."
   },
   "memo": {
-    "directive": "Directive 3."
+    "directive": "Directive 1."
   }
 }

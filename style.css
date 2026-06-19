@@ -399,6 +399,25 @@ body {
   }
 }
 
+.preview-stamp-pop {
+  animation: preview-stamp-in 0.4s ease-out forwards;
+}
+
+@keyframes preview-stamp-in {
+  0% {
+    opacity: 0;
+    transform: scale(1.8) rotate(-14deg);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(0.92) rotate(-8deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(-8deg);
+  }
+}
+
 /* ===== Mini ID Card (Shift page corner) ===== */
 
 .mini-id-card-flip {
@@ -663,6 +682,14 @@ body {
   object-fit: contain;
 }
 
+#info-btn {
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--accent-gold);
+}
+
 .end-shift-btn {
   position: fixed;
   bottom: 16px;
@@ -886,12 +913,6 @@ body {
 /* ===== Shift / Article Review ===== */
 
 .drop-zone {
-  position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 180px;
-  height: 40%;
-  max-height: 300px;
   border: 3px dashed rgba(255,255,255,0.3);
   border-radius: 12px;
   display: flex;
@@ -913,12 +934,33 @@ body {
 }
 
 .drop-zone-left {
+  position: fixed;
+  top: 50%;
   left: 24px;
+  transform: translateY(-50%);
+  width: 180px;
+  height: 40%;
+  max-height: 300px;
   cursor: pointer;
 }
 
-.drop-zone-right {
+.drop-zone-right-group {
+  position: fixed;
+  top: 50%;
   right: 24px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  z-index: 1;
+}
+
+.drop-zone-right {
+  position: relative;
+  width: 140px;
+  height: 18%;
+  min-height: 130px;
+  max-height: 170px;
   pointer-events: none;
 }
 
@@ -1041,6 +1083,32 @@ body {
   gap: 12px;
 }
 
+.nav-arrow {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: inherit;
+  color: var(--accent-gold);
+  background: var(--accent-navy);
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px var(--shadow);
+  cursor: pointer;
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+}
+
+.nav-arrow:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 6px var(--shadow);
+}
+
+.nav-arrow:focus-visible {
+  outline: 3px solid var(--accent-navy);
+  outline-offset: 2px;
+}
+
 .article-headline,
 .article-image,
 .article-content {
@@ -1053,6 +1121,56 @@ body {
   justify-content: center;
   color: var(--ink);
   text-align: center;
+  position: relative;
+}
+
+.element-checkbox {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 20px;
+  height: 20px;
+  accent-color: var(--accent-navy);
+  cursor: pointer;
+}
+
+.element-checkbox:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.element-stamp-spot {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  width: 36px;
+  height: 36px;
+  border: 2px dashed rgba(13, 31, 60, 0.35);
+  border-radius: 4px;
+}
+
+.element-stamp-spot.is-locked {
+  border-style: solid;
+  border-color: rgba(13, 31, 60, 0.6);
+}
+
+.element-stamp-spot img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.article-headline,
+.article-image,
+.article-content {
+  cursor: pointer;
+  transition: box-shadow 0.15s ease;
+}
+
+.article-headline.is-selected,
+.article-image.is-selected,
+.article-content.is-selected {
+  box-shadow: 0 0 0 3px var(--accent-navy), 0 8px 20px var(--shadow);
 }
 
 .article-headline {
@@ -1128,6 +1246,15 @@ body:has(#shift-screen) {
   justify-content: center;
   cursor: pointer;
   transition: transform 0.08s ease, box-shadow 0.08s ease;
+}
+
+.stamp-preview.is-selected {
+  box-shadow: 0 0 0 3px var(--accent-navy), 0 8px 20px var(--shadow);
+}
+
+.stamp-preview.is-locked {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .stamp-preview:active {
@@ -1253,6 +1380,12 @@ body:has(#shift-screen) {
   box-shadow: 0 4px 10px var(--shadow);
   cursor: pointer;
   transition: transform 0.08s ease, box-shadow 0.08s ease;
+}
+
+.stamp-swatch:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  pointer-events: none;
 }
 
 .stamp-swatch:active {

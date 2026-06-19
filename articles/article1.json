@@ -1,7 +1,7 @@
 {
-  "headline": "Headline 1",
-  "image": "Article Image 1",
-  "content": "Article Content 1",
+  "headline": ["Headline 1", "Headline 1 (alt 2)", "Headline 1 (alt 3)"],
+  "image": ["Article Image 1", "Article Image 1 (alt 2)", "Article Image 1 (alt 3)"],
+  "content": ["Article Content 1", "Article Content 1 (alt 2)", "Article Content 1 (alt 3)"],
   "editor": {
     "firstName": "First 1",
     "lastName": "Last 1",

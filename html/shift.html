@@ -20,6 +20,8 @@
       <button type="button" id="pause-btn" class="pause-btn" aria-label="Pause">
         <img src="../img/pause.png" alt="" id="pause-icon">
       </button>
+
+      <button type="button" id="info-btn" class="pause-btn" aria-label="Show rules">i</button>
     </div>
 
 
@@ -78,7 +80,7 @@
         <button type="button" id="memo-toggle" class="top-tab-toggle" aria-label="Toggle memo panel" aria-expanded="false">&#8595;</button>
 
         <div class="memo-report" id="memo-report">
-          <img src="../img/DCCBIG.png" alt="Department Seal" class="memo-report-seal">
+          <img src="../img/CoatOfArmsBig.png" alt="Department Seal" class="memo-report-seal">
           <img src="../img/FlagSmall.png" alt="National Flag" class="memo-report-flag">
 
           <div class="memo-report-directive">
@@ -93,11 +95,17 @@
 
     <div class="drop-zone drop-zone-left" id="drop-zone-left">
       <div class="pile" id="pile-left"></div>
-      <span>Unredacted</span>
+      <span>Pending</span>
     </div>
-    <div class="drop-zone drop-zone-right" id="drop-zone-right">
-      <div class="pile" id="pile-right"></div>
-      <span>Redacted</span>
+    <div class="drop-zone-right-group">
+      <div class="drop-zone drop-zone-right" id="drop-zone-approved">
+        <div class="pile" id="pile-approved"></div>
+        <span>Approved</span>
+      </div>
+      <div class="drop-zone drop-zone-right" id="drop-zone-rejected">
+        <div class="pile" id="pile-rejected"></div>
+        <span>Rejected</span>
+      </div>
     </div>
 
     <div class="article-slot">
@@ -107,21 +115,33 @@
 
       <article class="article-card" id="article-card">
         <div class="article-row" data-element="headline">
+          <button type="button" class="nav-arrow nav-arrow-left" aria-label="Previous headline">&#8592;</button>
           <section class="article-headline">
             <h1 id="article-headline-text">Headline</h1>
+            <input type="checkbox" class="element-checkbox" id="checkbox-headline" aria-label="Mark headline as checked">
+            <div class="element-stamp-spot" id="stamp-spot-headline"></div>
           </section>
+          <button type="button" class="nav-arrow nav-arrow-right" aria-label="Next headline">&#8594;</button>
         </div>
 
         <div class="article-row" data-element="image">
+          <button type="button" class="nav-arrow nav-arrow-left" aria-label="Previous image">&#8592;</button>
           <section class="article-image">
             <p id="article-image-text">Article Image</p>
+            <input type="checkbox" class="element-checkbox" id="checkbox-image" aria-label="Mark image as checked">
+            <div class="element-stamp-spot" id="stamp-spot-image"></div>
           </section>
+          <button type="button" class="nav-arrow nav-arrow-right" aria-label="Next image">&#8594;</button>
         </div>
 
         <div class="article-row" data-element="content">
+          <button type="button" class="nav-arrow nav-arrow-left" aria-label="Previous content">&#8592;</button>
           <section class="article-content">
             <p id="article-content-text">Article Content</p>
+            <input type="checkbox" class="element-checkbox" id="checkbox-content" aria-label="Mark content as checked">
+            <div class="element-stamp-spot" id="stamp-spot-content"></div>
           </section>
+          <button type="button" class="nav-arrow nav-arrow-right" aria-label="Next content">&#8594;</button>
         </div>
       </article>
     </div>
