@@ -1,15 +1,3 @@
-// Toggle the stamps panel, flipping the arrow direction
-const stampsToggle = document.getElementById('stamps-toggle');
-const stampsPopup = document.getElementById('stamps-popup');
-
-if (stampsToggle && stampsPopup) {
-  stampsToggle.addEventListener('click', () => {
-    const isOpen = stampsPopup.classList.toggle('is-open');
-    stampsToggle.innerHTML = isOpen ? '&#8595;' : '&#8593;';
-    stampsToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-  });
-}
-
 // Toggle the Editor / Memo report panels, ensuring only one is open at a time
 const editorToggle = document.getElementById('editor-toggle');
 const editorReport = document.getElementById('editor-report');
@@ -58,23 +46,6 @@ if (pauseBtn && pauseIcon) {
     isPaused = !isPaused;
     pauseIcon.src = isPaused ? '../img/play.png' : '../img/pause.png';
     pauseBtn.setAttribute('aria-label', isPaused ? 'Play' : 'Pause');
-  });
-}
-
-// Show game rules in a simple alert box
-const infoBtn = document.getElementById('info-btn');
-
-if (infoBtn) {
-  infoBtn.addEventListener('click', () => {
-    alert(
-      'RULES\n\n' +
-      'Each article has three parts: headline, image, and content.\n\n' +
-      'Review each part and stamp it according to whether it matches the directive:\n' +
-      '- If it matches: stamp it Approved.\n' +
-      '- If it does not match: stamp it Redacted.\n\n' +
-      'Once all three parts are checked, if two or more parts were redacted, ' +
-      'the entire article must be rejected.'
-    );
   });
 }
 

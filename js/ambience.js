@@ -1,6 +1,3 @@
-// Plays a looping ambient background sound (office noise).
-// Starts muted automatically on page load, then unmutes (and ensures
-// playback is running) on the first user interaction.
 document.addEventListener('DOMContentLoaded', () => {
   const ambientSound = new Audio('/ounds/office-ambience.mp3');
   ambientSound.loop = true;
