@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Department of Civil Communications — Shift</title>
-<link rel="stylesheet" href="../style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Department of Civil Communications — Shift</title>
+  <link rel="stylesheet" href="../style.css">
 </head>
 <body>
 
@@ -16,14 +16,11 @@
           <span class="article-queue-count" id="article-queue-count">0/4</span>
         </span>
       </div>
-
       <button type="button" id="pause-btn" class="pause-btn" aria-label="Pause">
         <img src="../img/pause.png" alt="" id="pause-icon">
       </button>
-
       <button type="button" id="info-btn" class="pause-btn" aria-label="Show rules">i</button>
     </div>
-
 
     <div class="top-tabs">
       <div class="top-tab">
@@ -31,7 +28,6 @@
           <span class="top-tab-label">Editor</span>
         </div>
         <button type="button" id="editor-toggle" class="top-tab-toggle" aria-label="Toggle editor panel" aria-expanded="false">&#8595;</button>
-
         <div class="editor-report" id="editor-report">
           <header class="editor-report-header">
             <h2>Editor Report</h2>
@@ -40,32 +36,24 @@
               <img src="../img/FlagSmall.png" alt="National Flag" class="editor-report-flag">
             </div>
           </header>
-
           <div class="editor-report-body">
             <div class="editor-report-photo" aria-hidden="true"></div>
-
             <div class="editor-report-details">
               <img src="../img/Watermark.png" alt="" class="editor-report-watermark" aria-hidden="true">
-
               <p class="editor-report-field"><strong>Affiliation:</strong></p>
               <p class="editor-report-value" id="editor-affiliation"></p>
-
               <p class="editor-report-field"><strong>Occupation:</strong></p>
               <p class="editor-report-value" id="editor-occupation"></p>
-
-              <p class="editor-report-field"><strong>Maritial Status:</strong></p>
+              <p class="editor-report-field"><strong>Marital Status:</strong></p>
               <p class="editor-report-value" id="editor-marital-status"></p>
-
-              <p class="editor-report-field"><strong>Reputation</strong></p>
+              <p class="editor-report-field"><strong>Reputation:</strong></p>
               <p class="editor-report-value" id="editor-reputation"></p>
             </div>
           </div>
-
           <div class="editor-report-name">
             <p id="editor-last-name"></p>
             <p id="editor-first-name"></p>
           </div>
-
           <div class="editor-report-briefing">
             <h3>Briefing</h3>
             <p id="editor-briefing"></p>
@@ -78,16 +66,12 @@
           <span class="top-tab-label">Memo</span>
         </div>
         <button type="button" id="memo-toggle" class="top-tab-toggle" aria-label="Toggle memo panel" aria-expanded="false">&#8595;</button>
-
         <div class="memo-report" id="memo-report">
           <img src="../img/CoatOfArmsBig.png" alt="Department Seal" class="memo-report-seal">
-          <img src="../img/FlagSmall.png" alt="National Flag" class="memo-report-flag">
-
           <div class="memo-report-directive">
             <h3>Directive</h3>
             <p id="memo-directive"></p>
           </div>
-
           <img src="../img/Watermark.png" alt="" class="memo-report-watermark" aria-hidden="true">
         </div>
       </div>
@@ -112,7 +96,6 @@
       <div class="review-outline">
         <span>Review</span>
       </div>
-
       <article class="article-card" id="article-card">
         <div class="article-row" data-element="headline">
           <button type="button" class="nav-arrow nav-arrow-left" aria-label="Previous headline">&#8592;</button>
@@ -147,7 +130,7 @@
     </div>
 
     <div class="stamp-selector">
-      <button type="button" id="stamp-preview" class="stamp-preview" aria-label="Selected stamp"></button>
+      <div id="stamp-preview" class="stamp-preview" aria-label="Final verdict stamp"></div>
     </div>
 
     <footer class="screen-footer">
@@ -170,34 +153,26 @@
               <img src="../img/FlagSmall.png" alt="National Flag" class="id-flag">
             </div>
           </header>
-
           <div class="id-body">
             <div class="id-photo-frame" aria-hidden="true"></div>
-
             <div class="id-details">
               <img src="../img/Watermark.png" alt="" class="id-watermark is-approved" aria-hidden="true">
-
               <p class="id-field"><strong>Affiliation</strong></p>
               <p class="id-value">Civilian</p>
-
               <p class="id-field"><strong>Agency Department</strong></p>
               <p class="id-value">Department of Civil Communications</p>
-
               <p class="id-field"><strong>Issued:</strong> <span id="mini-id-issued"></span></p>
               <p class="id-field"><strong>Expires:</strong> <span id="mini-id-expires"></span></p>
             </div>
           </div>
-
           <div class="id-name">
             <p id="mini-id-last-name"></p>
             <p id="mini-id-first-name"></p>
           </div>
-
           <footer class="id-footer">
             <span class="id-code" id="mini-id-code"></span>
           </footer>
         </article>
-
         <article class="mini-id-card mini-id-card-back">
           <img src="../img/CoatOfArmsBig.png" alt="Logo" class="id-back-logo">
         </article>
@@ -207,12 +182,9 @@
 
   <script src="../js/drag-article.js"></script>
   <script src="../js/miniID.js"></script>
-  <script src="../js/typewriter.js"></script>
   <script src="../js/shift.js"></script>
-  <script src="../js/drawer-sound.js"></script>
   <script src="../js/stamps.js"></script>
-  <script src="../js/stamp-sound.js"></script>
-  <script src="../js/ambience.js"></script>
+  <script src="../js/sounds.js"></script>
   <script src="../js/tutorial.js"></script>
 </body>
 </html>
