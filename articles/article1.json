@@ -1,17 +1,34 @@
 {
-  "headline": ["Headline 1", "Headline 1 (alt 2)", "Headline 1 (alt 3)"],
-  "image": ["Article Image 1", "Article Image 1 (alt 2)", "Article Image 1 (alt 3)"],
-  "content": ["Article Content 1", "Article Content 1 (alt 2)", "Article Content 1 (alt 3)"],
+  "headline": [
+    "State Algorithm Optimizes Grain Distribution Across Northern Provinces",
+    "Citizens Report Empty Shelves as Grain Algorithm Fails Northern Regions",
+    "Bureau Admits 'Minor Recalibration' Needed in Northern Supply Chain"
+  ],
+  "image": [
+    "[img: official photo of a grain depot with workers in uniform]",
+    "[img: photo of empty store shelves, handwritten sign reading 'OUT OF STOCK']",
+    "[img: press conference photo of Bureau spokesperson at podium]"
+  ],
+  "content": [
+    "The Central Planning Bureau announced this week that its new logistics algorithm has successfully reduced food transport waste by 34% across the northern provinces. Officials credit the system's predictive modeling for the historic efficiency gains, calling it a triumph of rational governance over market volatility. Citizens are encouraged to register their consumption data at local distribution centers.",
+    "Residents of Provinces 7 through 12 have reported critically low food supplies for the third consecutive week, with local administrators blaming the Bureau's newly deployed logistics algorithm for miscalculating regional demand. Several families have reportedly begun rationing staples. Underground markets are said to be re-emerging in Sector 9.",
+    "The Central Planning Bureau acknowledged a 'minor recalibration requirement' in its northern distribution algorithm following feedback from provincial administrators. Officials insist the system remains 87% operational and that any disruption is temporary. Compensation protocols for affected citizens are under review."
+  ],
+  "correct": {
+    "headline": 0,
+    "image": 0,
+    "content": 0
+  },
   "editor": {
-    "firstName": "First 1",
-    "lastName": "Last 1",
+    "firstName": "Marek",
+    "lastName": "Volnik",
     "affiliation": "Civilian",
-    "occupation": "Journalist",
-    "maritalStatus": "Unknown",
-    "reputation": "Neutral",
-    "briefing": "Briefing 1."
+    "occupation": "Independent Journalist",
+    "maritalStatus": "Married, one child",
+    "reputation": "Unreliable",
+    "briefing": "Known critic of state resource allocation programs. Has previously published unverified claims regarding supply chain data manipulation. Article variants 2 and 3 contain damaging information."
   },
   "memo": {
-    "directive": "Directive 1."
+    "directive": "The Bureau's algorithm is a flagship initiative backed by the Agricultural Lobby Consortium. Any coverage implying system failure must be suppressed. Approve only the variant that reflects operational success. Redact image and content variants showing supply shortages or administrative failures."
   }
 }

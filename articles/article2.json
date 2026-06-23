@@ -1,17 +1,34 @@
 {
-  "headline": ["Headline 1", "Headline 1 (alt 2)", "Headline 1 (alt 3)"],
-  "image": ["Article Image 1", "Article Image 1 (alt 2)", "Article Image 1 (alt 3)"],
-  "content": ["Article Content 1", "Article Content 1 (alt 2)", "Article Content 1 (alt 3)"],
+  "headline": [
+    "Citizens Urged to Register Productivity Hours with the National Labor Registry",
+    "Mandatory Work Logging System Draws Criticism from Labor Advocacy Groups",
+    "New Productivity Portal Launches Amid Reports of Data Harvesting Concerns"
+  ],
+  "image": [
+    "[img: official graphic of the Labor Registry portal interface, clean UI]",
+    "[img: protest outside Ministry of Labor, citizens holding signs]",
+    "[img: leaked document showing productivity data linked to credit scores]"
+  ],
+  "content": [
+    "The Department of Civil Labor has launched a new mandatory productivity registration portal, requiring all employed citizens to log weekly output metrics. Minister Dara Voss stated that the data will be used to better align workforce capacity with national production targets. Participation is a civic duty and reflects the citizen's commitment to collective prosperity.",
+    "Labor advocacy groups have condemned the new mandatory productivity portal as an unprecedented intrusion into workers' private lives. Critics argue the system allows the state to penalize underperformance without due process. Three regional union representatives were briefly detained after publicly opposing the initiative.",
+    "Internal documents obtained by this publication suggest that data collected through the new Labor Registry portal will be cross-referenced with citizens' social credit scores and loan eligibility assessments. The Ministry has declined to comment on the documents' authenticity."
+  ],
+  "correct": {
+    "headline": 0,
+    "image": 0,
+    "content": 0
+  },
   "editor": {
-    "firstName": "First 1",
-    "lastName": "Last 1",
+    "firstName": "Irina",
+    "lastName": "Petsch",
     "affiliation": "Civilian",
-    "occupation": "Journalist",
-    "maritalStatus": "Unknown",
-    "reputation": "Neutral",
-    "briefing": "Briefing 1."
+    "occupation": "Political Correspondent",
+    "maritalStatus": "Single",
+    "reputation": "Dissident",
+    "briefing": "Has a history of framing state efficiency measures as surveillance initiatives. Known contact of two detained union representatives. Variants 2 and 3 risk inciting public non-compliance with the registry."
   },
   "memo": {
-    "directive": "Directive 1."
+    "directive": "The Labor Registry is a priority initiative of the National Productivity Commission and its corporate partners. Coverage must not associate the portal with surveillance or social credit systems. Approve only the variant presenting the portal as a civic tool. All variants referencing protests, detentions or leaked documents must be redacted."
   }
 }

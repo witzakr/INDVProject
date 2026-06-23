@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Department of Civil Communications — End of Shift</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <main class="screen" id="end-screen">
+    <article class="card">
+      <header class="card-header">
+        <img src="../img/DCCLOGOSMALL.png" alt="Department Seal" class="seal">
+        <img src="../img/FlagSmall.png" alt="National Flag" class="flag">
+      </header>
+
+      <section class="card-body end-card-body">
+        <p class="end-label">SHIFT PERFORMANCE REPORT</p>
+        <p class="end-employee" id="end-employee-name">— / —</p>
+
+        <div class="end-divider"></div>
+
+        <div class="end-stats">
+          <div class="end-stat">
+            <span class="end-stat-label">Articles Processed</span>
+            <span class="end-stat-value" id="end-articles">0 / 4</span>
+          </div>
+          <div class="end-stat">
+            <span class="end-stat-label">Compliance Score</span>
+            <span class="end-stat-value" id="end-score">0 / 20</span>
+          </div>
+          <div class="end-stat">
+            <span class="end-stat-label">Time on Shift</span>
+            <span class="end-stat-value" id="end-time">00:00</span>
+          </div>
+        </div>
+
+        <div class="end-divider"></div>
+
+        <p class="end-verdict-label">EMPLOYMENT STATUS</p>
+        <p class="end-verdict" id="end-verdict">—</p>
+
+        <div class="end-divider"></div>
+
+        <p class="end-consequence" id="end-consequence">—</p>
+
+        <div class="end-stamp" id="end-stamp"></div>
+      </section>
+    </article>
+
+    <footer class="screen-footer">
+      <a href="credits.html" class="start-btn">New Shift</a>
+    </footer>
+  </main>
+
+  <script src="../js/EndScreen.js"></script>
+</body>
+</html>

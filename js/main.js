@@ -1,18 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Shared state for which element/spot is currently selected for stamping
   window.selectedStampTarget = null;
 
   // --- Instantiate all managers ---
-  const sounds  = new SoundManager();
-  const piles   = new PileManager();
-  const article = new ArticleManager();
-  const review  = new ReviewManager(() => {});
-  const stamps  = new StampManager(review, sounds, onFinalize);
-  const ui      = new UIManager(sounds);
-  const miniID  = new MiniIDCard();
+  const sounds   = new SoundManager();
+  const piles    = new PileManager();
+  const article  = new ArticleManager();
+  const review   = new ReviewManager(() => {});
+  const stamps   = new StampManager(review, sounds, onFinalize);
+  const ui       = new UIManager(sounds);
+  const miniID   = new MiniIDCard();
   const tutorial = new TutorialManager();
 
-  // --- Initialise the pending pile ---
+  // --- Scoring ---
+  let totalScore    = 0;
+  let articlesProcessed = 0;
+  const shiftStart  = Date.now();
+
+  // --- Initialise pending pile ---
   piles.initPending(article.TOTAL);
   article.hideCard();
 
@@ -51,12 +55,43 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- Finalize: send article to approved/rejected pile ---
+  // --- Score an article's element choices against its correct answers ---
+  function scoreArticle(outcome) {
+    let score = 0;
+    const correct = article.data?.correct;
+    if (correct) {
+      if (article.variants.headline === correct.headline) score++;
+      if (article.variants.image    === correct.image)    score++;
+      if (article.variants.content  === correct.content)  score++;
+    }
+    // Final stamp: green = approved = correct per memo directive
+    if (outcome === 'approved') score += 2;
+    return score;
+  }
+
+  // --- Finalize: score, send to pile, advance ---
   function onFinalize(outcome, stampSrc) {
+    const articleScore = scoreArticle(outcome);
+    totalScore += articleScore;
+    articlesProcessed++;
+
     if (outcome === 'approved') piles.sendToApproved(stampSrc);
     else                        piles.sendToRejected(stampSrc);
+
     article.incrementQueue();
     article.hideCard();
     article.advance();
+  }
+
+  // --- End Shift button ---
+  const endShiftBtn = document.getElementById('end-shift-btn');
+  if (endShiftBtn) {
+    endShiftBtn.addEventListener('click', () => {
+      const elapsed = Math.floor((Date.now() - shiftStart) / 1000);
+      sessionStorage.setItem('endScore',    String(totalScore));
+      sessionStorage.setItem('endArticles', String(articlesProcessed));
+      sessionStorage.setItem('endTime',     String(elapsed));
+      window.location.href = 'end.html';
+    });
   }
 });

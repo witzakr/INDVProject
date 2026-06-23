@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Department of Civil Communications — Credits</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    body {
+      background: var(--accent-navy);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .credits-scroll {
+      position: fixed;
+      bottom: 0;
+      left: 50%;
+      width: 100%;
+      max-width: 540px;
+      padding: 0 32px;
+      text-align: center;
+      animation: credits-roll 44s linear both;
+    }
+
+    @keyframes credits-roll {
+      from { transform: translateX(-50%) translateY(100vh); }
+      to   { transform: translateX(-50%) translateY(-100%); }
+    }
+
+    .credits-logo {
+      width: 110px;
+      height: 110px;
+      object-fit: contain;
+      opacity: 0.9;
+      margin-bottom: 32px;
+    }
+
+    .credits-title {
+      font-family: Cambria, "Times New Roman", serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--accent-gold);
+      letter-spacing: 0.08em;
+      margin-bottom: 6px;
+    }
+
+    .credits-subtitle {
+      font-family: Cambria, "Times New Roman", serif;
+      font-size: 0.8rem;
+      color: rgba(201, 168, 76, 0.5);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 80px;
+    }
+
+    .credits-section {
+      margin-bottom: 64px;
+    }
+
+    .credits-section-label {
+      font-family: Cambria, "Times New Roman", serif;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(201, 168, 76, 0.45);
+      margin-bottom: 14px;
+    }
+
+    .credits-entry {
+      margin-bottom: 20px;
+    }
+
+    .credits-role {
+      font-family: Cambria, "Times New Roman", serif;
+      font-size: 0.75rem;
+      color: rgba(201, 168, 76, 0.5);
+      letter-spacing: 0.08em;
+      margin-bottom: 4px;
+    }
+
+    .credits-name {
+      font-family: Cambria, "Times New Roman", serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--accent-gold);
+    }
+
+    .credits-name.redacted {
+      background: #000000;
+      color: transparent;
+      border-radius: 2px;
+      user-select: none;
+    }
+
+    .credits-divider {
+      width: 40px;
+      height: 1px;
+      background: rgba(201, 168, 76, 0.25);
+      margin: 48px auto;
+    }
+
+    .credits-note {
+      font-family: Cambria, "Times New Roman", serif;
+      font-size: 0.8rem;
+      color: rgba(201, 168, 76, 0.4);
+      line-height: 1.7;
+      font-style: italic;
+      margin-bottom: 80px;
+    }
+
+    .credits-footer {
+      font-family: Cambria, "Times New Roman", serif;
+      font-size: 0.7rem;
+      color: rgba(201, 168, 76, 0.3);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding-bottom: 120px;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="../index.html" class="start-btn" style="position:fixed;top:24px;right:24px;width:auto;padding:12px 24px;font-size:1rem;z-index:100;">New Shift &#8594;</a>
+
+  <div class="credits-scroll" id="credits-scroll">
+
+    <img src="../img/CoatOfArmsBig.png" alt="Department of Civil Communications" class="credits-logo">
+    <p class="credits-title">Vanguard of the Machine</p>
+    <p class="credits-subtitle">but, you're just a cogwheel</p>
+
+    <div class="credits-section">
+      <p class="credits-section-label">Created by</p>
+      <div class="credits-entry">
+        <p class="credits-role">Design, Development &amp; Narrative</p>
+        <p class="credits-name">Wit Zakrzewski</p>
+      </div>
+    </div>
+
+    <div class="credits-divider"></div>
+
+    <div class="credits-section">
+      <p class="credits-section-label">Audio</p>
+      <div class="credits-entry">
+        <p class="credits-role">Ambient Sound</p>
+        <p class="credits-name redacted">████████████████</p>
+      </div>
+      <div class="credits-entry">
+        <p class="credits-role">Stamp Effects</p>
+        <p class="credits-name redacted">███████████</p>
+      </div>
+      <div class="credits-entry">
+        <p class="credits-role">Interface Sounds</p>
+        <p class="credits-name redacted">████████████████████</p>
+      </div>
+    </div>
+
+    <div class="credits-divider"></div>
+
+    <div class="credits-section">
+      <p class="credits-section-label">Imagery &amp; Assets</p>
+      <div class="credits-entry">
+        <p class="credits-role">State Insignia &amp; Iconography</p>
+        <p class="credits-name">Wit Zakrzewski</p>
+      </div>
+      <div class="credits-entry">
+        <p class="credits-role">Press Photography</p>
+        <p class="credits-name redacted">████████████</p>
+      </div>
+      <div class="credits-entry">
+        <p class="credits-role">Document Design</p>
+        <p class="credits-name">Wit Zakrzewski</p>
+      </div>
+    </div>
+
+    <div class="credits-divider"></div>
+
+    <div class="credits-section">
+      <p class="credits-section-label">Special Thanks</p>
+      <div class="credits-entry">
+        <p class="credits-role">Narrative Consultation</p>
+        <p class="credits-name redacted">████████████████████████</p>
+      </div>
+      <div class="credits-entry">
+        <p class="credits-role">Playtesting</p>
+        <p class="credits-name redacted">███████ &amp; ██████████</p>
+      </div>
+    </div>
+
+    <div class="credits-divider"></div>
+
+    <p class="credits-note">
+      This work is a fiction. Any resemblance to actual state institutions,<br>
+      lobby groups, or communication standards is entirely coincidental<br>
+      and has been approved by the relevant authorities.
+    </p>
+
+    <p class="credits-footer">
+      &copy; Department of Civil Communications &mdash; All records retained
+    </p>
+
+  </div>
+
+  <script>
+    // After the animation ends, redirect to the next shift
+    document.getElementById('credits-scroll').addEventListener('animationend', () => {
+      window.location.href = 'shift.html';
+    });
+  </script>
+
+</body>
+</html>
