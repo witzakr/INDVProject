@@ -1,6 +1,6 @@
 class SoundManager {
   constructor() {
-    this.ambient  = this._load('../sounds/office-ambience.mp3');
+    this.ambient  = this._load('../sounds/office-ambiee.mp3');
     this.typeclick = this._load('../sounds/typeclick.mp3');
     this.stamp     = this._load('../sounds/stamp.mp3');
     this.drawer    = this._load('../sounds/draweropen.mp3');

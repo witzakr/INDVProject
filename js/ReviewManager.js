@@ -22,6 +22,9 @@ class ReviewManager {
       element.addEventListener('click', e => {
         if (e.target.classList.contains('element-checkbox')) return;
 
+        // If this element is already checked/locked, ignore clicks entirely
+        if (checkbox && checkbox.checked) return;
+
         const wasSelected = element.classList.contains('is-selected');
 
         // Deselect all

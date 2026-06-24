@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- Initialise pending pile ---
   piles.initPending(article.TOTAL);
   article.hideCard();
+  sessionStorage.removeItem('consequences');
 
   // --- Wire article arrows ---
   document.querySelectorAll('.article-row').forEach(row => {
@@ -74,6 +75,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const articleScore = scoreArticle(outcome);
     totalScore += articleScore;
     articlesProcessed++;
+
+    // Store consequence for this article
+    const consequences = JSON.parse(sessionStorage.getItem('consequences') || '[]');
+    const consequence  = article.data?.consequences?.[outcome] || null;
+    if (consequence) {
+      consequences.push({
+        index:  article.index + 1,
+        outcome,
+        text:   consequence
+      });
+      sessionStorage.setItem('consequences', JSON.stringify(consequences));
+    }
 
     if (outcome === 'approved') piles.sendToApproved(stampSrc);
     else                        piles.sendToRejected(stampSrc);

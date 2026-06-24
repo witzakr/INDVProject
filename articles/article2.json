@@ -14,21 +14,16 @@
     "Labor advocacy groups have condemned the new mandatory productivity portal as an unprecedented intrusion into workers' private lives. Critics argue the system allows the state to penalize underperformance without due process. Three regional union representatives were briefly detained after publicly opposing the initiative.",
     "Internal documents obtained by this publication suggest that data collected through the new Labor Registry portal will be cross-referenced with citizens' social credit scores and loan eligibility assessments. The Ministry has declined to comment on the documents' authenticity."
   ],
-  "correct": {
-    "headline": 0,
-    "image": 0,
-    "content": 0
+  "correct": { "headline": 0, "image": 0, "content": 0 },
+  "consequences": {
+    "approved": "Labor Registry enrollment reached 94% within 11 days of publication. Citizens in the lowest productivity bracket have had their travel permits suspended pending review. The Ministry reports the system is performing within expected parameters.",
+    "rejected": "The article was not published. The three union representatives mentioned in suppressed drafts were formally charged with civil disruption. Their trial is not open to the public. Sentencing is expected within the month."
   },
   "editor": {
-    "firstName": "Irina",
-    "lastName": "Petsch",
-    "affiliation": "Civilian",
-    "occupation": "Political Correspondent",
-    "maritalStatus": "Single",
-    "reputation": "Dissident",
-    "briefing": "Has a history of framing state efficiency measures as surveillance initiatives. Known contact of two detained union representatives. Variants 2 and 3 risk inciting public non-compliance with the registry."
+    "firstName": "Irina", "lastName": "Petsch",
+    "affiliation": "Civilian", "occupation": "Political Correspondent",
+    "maritalStatus": "Single", "reputation": "Dissident",
+    "briefing": "Has a history of framing state efficiency measures as surveillance initiatives. Known contact of two detained union representatives."
   },
-  "memo": {
-    "directive": "The Labor Registry is a priority initiative of the National Productivity Commission and its corporate partners. Coverage must not associate the portal with surveillance or social credit systems. Approve only the variant presenting the portal as a civic tool. All variants referencing protests, detentions or leaked documents must be redacted."
-  }
+  "memo": { "directive": "The Labor Registry is a priority initiative of the National Productivity Commission and its corporate partners. Coverage must not associate the portal with surveillance or social credit systems. Approve only the variant presenting the portal as a civic tool." }
 }

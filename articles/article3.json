@@ -14,21 +14,16 @@
     "Parents in six districts have staged coordinated protests against the Ministry's new curriculum, objecting to the elimination of individual grades and the introduction of mandatory ideological aptitude modules. Several parents described the changes as 'erasing the individual.' Attendance at protest sites was higher than any demonstration recorded this year.",
     "More than 340 teachers have resigned or requested transfers since the new curriculum was introduced, citing professional concerns about the mandatory collective assessment framework. Education insiders suggest the reforms were fast-tracked following pressure from the Bureau of Social Cohesion, bypassing the standard public consultation period."
   ],
-  "correct": {
-    "headline": 0,
-    "image": 0,
-    "content": 0
+  "correct": { "headline": 0, "image": 0, "content": 0 },
+  "consequences": {
+    "approved": "The reform was implemented nationwide within 30 days of publication. Ideological aptitude scores are now included in university placement decisions. Parents who organised protests in Districts 3 and 5 have received notices requiring them to attend civil re-orientation sessions.",
+    "rejected": "The article was not published. Education correspondent Tobias Raen has been transferred to a regional bureau. His family has relocated. No forwarding address has been registered. The reform proceeded regardless."
   },
   "editor": {
-    "firstName": "Tobias",
-    "lastName": "Raen",
-    "affiliation": "Civilian",
-    "occupation": "Education Correspondent",
-    "maritalStatus": "Married, two children",
-    "reputation": "Cautiously Cooperative",
-    "briefing": "Generally aligned with state education policy but has shown sympathy toward parental concerns. Variants 2 and 3 amplify dissent and could legitimize protest movements against the reform."
+    "firstName": "Tobias", "lastName": "Raen",
+    "affiliation": "Civilian", "occupation": "Education Correspondent",
+    "maritalStatus": "Married, two children", "reputation": "Cautiously Cooperative",
+    "briefing": "Generally aligned with state education policy but has shown sympathy toward parental concerns."
   },
-  "memo": {
-    "directive": "The education reform is co-sponsored by the Unified Learning Institute, a key government partner. Coverage must not amplify parental protests or the teacher attrition rate. Approve only the variant presenting the reform as a progressive success. Redact all variants referencing protests, resignations, or procedural bypasses."
-  }
+  "memo": { "directive": "The education reform is co-sponsored by the Unified Learning Institute, a key government partner. Coverage must not amplify parental protests or the teacher attrition rate. Approve only the variant presenting the reform as a progressive success." }
 }

@@ -19,6 +19,10 @@
     "image": 0,
     "content": 0
   },
+  "consequences": {
+    "approved": "Grain shortage in Province 7 enters its fourth week. 340 families have been relocated to emergency housing blocks. The Bureau has issued no further comment. The algorithm remains in operation.",
+    "rejected": "The article was not published. Journalist Marek Volnik was summoned for questioning on Thursday. He did not return to his registered address. His family has been advised to await formal notification."
+  },
   "editor": {
     "firstName": "Marek",
     "lastName": "Volnik",

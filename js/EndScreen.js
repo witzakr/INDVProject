@@ -82,6 +82,67 @@ class EndScreen {
 
     // Typewrite the consequence text for atmosphere
     this._typewrite('end-consequence', tier.consequence);
+
+    // Render the incident log
+    this._renderIncidentLog();
+  }
+
+  _renderIncidentLog() {
+    const consequences = JSON.parse(sessionStorage.getItem('consequences') || '[]');
+    if (consequences.length === 0) return;
+
+    const carousel  = document.getElementById('end-incident-carousel');
+    const divider   = document.getElementById('end-incident-divider');
+    const header    = document.getElementById('end-incident-header');
+    const labelEl   = document.getElementById('end-incident-label');
+    const textEl    = document.getElementById('end-incident-text');
+    const counterEl = document.getElementById('end-incident-counter');
+    const prevBtn   = document.getElementById('end-incident-prev');
+    const nextBtn   = document.getElementById('end-incident-next');
+    if (!carousel || !labelEl || !textEl) return;
+
+    let currentIndex = 0;
+    let typewriteTimeout = null;
+
+    const showEntry = (index) => {
+      const entry = consequences[index];
+      labelEl.textContent   = `DOCUMENT ${entry.index} — ${entry.outcome.toUpperCase()}`;
+      textEl.textContent    = '';
+      counterEl.textContent = `${index + 1} / ${consequences.length}`;
+      prevBtn.disabled = index === 0;
+      nextBtn.disabled = index === consequences.length - 1;
+
+      // Re-trigger slide animation
+      const entryEl = carousel.querySelector('.end-incident-entry');
+      if (entryEl) {
+        entryEl.style.animation = 'none';
+        requestAnimationFrame(() => { entryEl.style.animation = ''; });
+      }
+
+      if (typewriteTimeout) clearTimeout(typewriteTimeout);
+      let i = 0;
+      const tick = () => {
+        if (i < entry.text.length) {
+          textEl.textContent += entry.text[i++];
+          typewriteTimeout = setTimeout(tick, 16);
+        }
+      };
+      tick();
+    };
+
+    prevBtn.addEventListener('click', () => {
+      if (currentIndex > 0) showEntry(--currentIndex);
+    });
+    nextBtn.addEventListener('click', () => {
+      if (currentIndex < consequences.length - 1) showEntry(++currentIndex);
+    });
+
+    setTimeout(() => {
+      if (divider)  divider.style.display  = '';
+      if (header)   header.style.display   = '';
+      carousel.style.display = 'flex';
+      showEntry(0);
+    }, 2000);
   }
 
   _set(id, text) {

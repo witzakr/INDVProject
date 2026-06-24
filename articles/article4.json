@@ -14,21 +14,16 @@
     "Residents of Sector 7 have begun receiving algorithmically generated relocation orders, with some families given as little as 11 days to vacate properties they have occupied for decades. Community leaders report that elderly residents and families with disabled members have received no exemption provisions. Legal challenges are being quietly discouraged by local administrators.",
     "A cross-referencing analysis of housing assignments issued under the new system suggests that citizens flagged in the Social Compliance Registry are being disproportionately assigned to remote sectors with limited access to civic services. Infrastructure Council officials have dismissed the pattern as 'a statistical artifact.'"
   ],
-  "correct": {
-    "headline": 0,
-    "image": 0,
-    "content": 0
+  "correct": { "headline": 0, "image": 0, "content": 0 },
+  "consequences": {
+    "approved": "Sector 7 relocation orders were issued to 1,200 households within 18 days of publication. Twelve families refused to vacate. Their cases have been referred to the Bureau of Civil Compliance. UrbanCore Solutions has been awarded a second contract for Sectors 11 through 14.",
+    "rejected": "The article was not published. Urban affairs reporter Sela Ormann's press credentials have been suspended pending a conduct review. Her previous articles have been removed from the national archive. The housing assignments proceeded on schedule."
   },
   "editor": {
-    "firstName": "Sela",
-    "lastName": "Ormann",
-    "affiliation": "Civilian",
-    "occupation": "Urban Affairs Reporter",
-    "maritalStatus": "Divorced",
-    "reputation": "Hostile",
-    "briefing": "Vocal opponent of automated civic systems. Has filed three formal complaints against the Infrastructure Council this year. Variants 2 and 3 contain material likely to provoke public resistance and legal scrutiny of the assignment system."
+    "firstName": "Sela", "lastName": "Ormann",
+    "affiliation": "Civilian", "occupation": "Urban Affairs Reporter",
+    "maritalStatus": "Divorced", "reputation": "Hostile",
+    "briefing": "Vocal opponent of automated civic systems. Has filed three formal complaints against the Infrastructure Council this year."
   },
-  "memo": {
-    "directive": "The housing assignment system was developed in partnership with UrbanCore Solutions, the state's primary infrastructure contractor. Any coverage suggesting coercion, targeting of dissidents, or inadequate exemptions must be suppressed. Approve only the variant framing the system as a service improvement. Redact all variants referencing evictions, disabled exemptions, or social compliance targeting."
-  }
+  "memo": { "directive": "The housing assignment system was developed in partnership with UrbanCore Solutions, the state's primary infrastructure contractor. Any coverage suggesting coercion, targeting of dissidents, or inadequate exemptions must be suppressed. Approve only the variant framing the system as a service improvement." }
 }

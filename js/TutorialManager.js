@@ -1,15 +1,51 @@
 class TutorialManager {
   constructor() {
     this.steps = [
-      { target: 'drop-zone-left',       title: 'Pending Pile',        text: 'This is your stack of pending articles. Click it to pull the top article into the review slot.' },
-      { target: 'article-slot',         title: 'Review Slot',         text: 'Articles appear here once pulled from the pending pile. This is where you review each article before making a decision.' },
-      { target: 'article-card',         title: 'Article Elements',    text: 'Each article has three parts: headline, image, and content. Click an element to select it, then use the arrows to switch between variants.' },
-      { target: 'stamps-rack',          title: 'Stamp Rack',          text: 'Use the yellow stamp to mark individual article elements. Once all elements are checked, red and green unlock for the final verdict.' },
-      { target: 'stamp-preview',        title: 'Final Verdict Stamp', text: 'Once all three elements are checked, stamp this spot with green (approved) or red (rejected) to finalize the article.' },
-      { target: 'editor-toggle',        title: 'Editor Report',       text: 'Click here to open the Editor Report — background info about the article\'s author.' },
-      { target: 'memo-toggle',          title: 'Memo',                text: 'Click here to open the Memo — your directive for this article.' },
-      { target: 'drop-zone-right-group',title: 'Approved & Rejected', text: 'Articles you approve go to the Approved pile. Articles you reject go to the Rejected pile.' },
-      { target: 'article-queue-count',  title: 'Article Queue',       text: 'This tracks your progress through the current shift. Complete all articles before your shift ends.' }
+      {
+        target: 'drop-zone-left',
+        title:  'CIVIC-7 // INITIALISING',
+        text:   'Welcome, Employee. I am CIVIC-7, your assigned compliance monitoring unit. The stack to your left contains your assigned articles for this shift. Select the top document to begin processing.'
+      },
+      {
+        target: 'article-slot',
+        title:  'CIVIC-7 // REVIEW SLOT',
+        text:   'Once retrieved, the document will appear here for your assessment. You are expected to review each element carefully before proceeding.'
+      },
+      {
+        target: 'article-card',
+        title:  'CIVIC-7 // DOCUMENT COMPONENTS',
+        text:   'Each document contains three components: headline, image, and content. Use the arrows to cycle through available variants. Select a component to begin your evaluation.'
+      },
+      {
+        target: 'stamps-rack',
+        title:  'CIVIC-7 // STAMP PROTOCOL',
+        text:   'The yellow stamp is used to mark individual components during review. Red and green become available only once all components have been evaluated.'
+      },
+      {
+        target: 'stamp-preview',
+        title:  'CIVIC-7 // FINAL VERDICT',
+        text:   'When all components are assessed, apply your final verdict here. Green indicates compliance. Red indicates rejection. Choose carefully — your decisions are logged.'
+      },
+      {
+        target: 'editor-toggle',
+        title:  'CIVIC-7 // EDITOR INTELLIGENCE',
+        text:   'This panel contains background intelligence on the article\'s author. Cross-reference their profile with the directive before making your assessment.'
+      },
+      {
+        target: 'memo-toggle',
+        title:  'CIVIC-7 // DIRECTIVE',
+        text:   'Your directive for this document is contained here. It outlines what the State requires. Deviation from the directive is noted.'
+      },
+      {
+        target: 'drop-zone-right-group',
+        title:  'CIVIC-7 // DOCUMENT FILING',
+        text:   'Compliant documents are filed to the right. Non-compliant documents are also filed to the right. The State reviews all outcomes.'
+      },
+      {
+        target: 'article-queue-count',
+        title:  'CIVIC-7 // SHIFT PROGRESS',
+        text:   'This displays your processing progress. Complete all assigned documents before your shift expires. Failure to do so is recorded.'
+      }
     ];
 
     this.current = 0;
