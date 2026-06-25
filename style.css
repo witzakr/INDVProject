@@ -256,10 +256,12 @@ body {
 
 .id-photo-frame {
   width: 38%;
-  max-height: 180px;
+  max-width: 140px;
+  flex-shrink: 0;
   aspect-ratio: 3 / 4;
   background: #ffffff;
   border: 1px solid rgba(0,0,0,0.15);
+  align-self: flex-start;
 }
 
 .id-details {
@@ -472,9 +474,10 @@ body {
 
 .mini-id-card .id-photo-frame {
   width: 38%;
+  max-width: 70px;
   flex-shrink: 0;
-  max-height: 95px;
   aspect-ratio: 3 / 4;
+  align-self: flex-start;
 }
 
 .mini-id-card .id-details { flex: 1; min-width: 0; }

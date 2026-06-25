@@ -76,7 +76,7 @@ class ReviewManager {
   }
 
   _initArrows() {
-    // Arrows are wired by ArticleManager via cycleVariant — nothing needed here
+    // Arrows are wired by ArticleManager via cycleVariant
   }
 
   _hasStamp(spot) {

@@ -49,6 +49,13 @@ class ArticleManager {
         spot.classList.remove('is-locked');
       }
     }
+
+    // Re-lock the checkbox for this field since the variant changed and the stamp is gone
+    const checkbox = document.getElementById(`checkbox-${field}`);
+    if (checkbox && !checkbox.checked) {
+      const hasValidStamp = spot && spot.querySelector('img') && !spot.classList.contains('is-locked');
+      checkbox.disabled = !hasValidStamp;
+    }
   }
 
   cycleVariant(field, direction) {
@@ -103,6 +110,13 @@ class ArticleManager {
       set('editor-marital-status', e.maritalStatus);
       set('editor-reputation',    e.reputation);
       set('editor-briefing',      e.briefing);
+
+      // Load editor photo based on article index
+      const photo = document.getElementById('editor-photo');
+      if (photo) {
+        photo.src = `../editors/${this.index + 1}Editor.jpg`;
+        photo.style.display = 'block';
+      }
     }
 
     // Populate memo panel
